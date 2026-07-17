@@ -137,3 +137,58 @@ button:hover{
     color:#bbb;
     padding:0 20px 30px;
 }
+.collection{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.collection h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#bdbdbd;
+    margin-bottom:60px;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#111;
+    width:320px;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:20px 0 10px;
+    font-size:24px;
+}
+
+.card p{
+    color:gold;
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+.card button{
+    margin-bottom:25px;
+}
