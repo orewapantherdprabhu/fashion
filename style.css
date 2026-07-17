@@ -244,3 +244,13 @@ button:hover{
 .card button{
     margin-bottom:25px;
 }
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
