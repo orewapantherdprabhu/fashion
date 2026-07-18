@@ -85,18 +85,14 @@ body{
 
 }
 
-.menu-btn{
-
-    color:white;
-
-    font-size:15px;
-
-    letter-spacing:3px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.menu-btn {
+    background: transparent;
+    border: none;
+    color: white; /* or your navbar text color */
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    outline: none;
 }
 
 .menu-btn:hover{
