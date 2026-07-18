@@ -10,103 +10,73 @@ body{
     color:white;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    position:relative;
-    transition:.3s;
-}
+/* ================= NAVBAR ================= */
 
-nav a::after{
-
-    content:"";
-
-    position:absolute;
-
+#navbar{
+    position:fixed;
+    top:0;
     left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:gold;
-
-    transition:.3s;
-
-}
-
-nav a:hover::after{
-
     width:100%;
+    padding:25px 0;
+    z-index:1000;
 
-}
-
-nav h2{
-    letter-spacing:6px;
-}
-
-nav ul{
     display:flex;
-    list-style:none;
-    gap:40px;
+    flex-direction:column;
+    align-items:center;
+
+    background:transparent;
+
+    transition:all .4s ease;
 }
 
-nav a{
-    color:white;
+#navbar.scrolled{
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:42px;
+    letter-spacing:12px;
+    color:#d4c17c;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.nav-links{
+    display:flex;
+    gap:55px;
+    list-style:none;
+}
+
+.nav-links a{
     text-decoration:none;
+    color:white;
+    font-size:14px;
+    letter-spacing:4px;
     position:relative;
     transition:.3s;
 }
 
-nav a::after{
+.nav-links a:hover{
+    color:#d4c17c;
+}
 
+.nav-links a::after{
     content:"";
-
     position:absolute;
-
     left:0;
-
-    bottom:-6px;
-
+    bottom:-8px;
     width:0;
-
     height:2px;
-
-    background:gold;
-
-    transition:.3s;
-
+    background:#d4c17c;
+    transition:.35s;
 }
 
-nav a:hover::after{
-
+.nav-links a:hover::after{
     width:100%;
-
 }
 
-nav a:hover{
-    color:gold;
-}
-
-button{
-
-    padding:16px 42px;
-    border:none;
-
-    background:gold;
-
-    cursor:pointer;
-
-    font-size:16px;
-    transition:.3s;
-}
-
-button:hover{
-
-    transform:scale(1.05);
-}
 .collection{
     padding:100px 10%;
     background:#111;
