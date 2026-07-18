@@ -101,6 +101,20 @@ body{
 
 }
 
+.menu-secondary.first{
+    margin-top: 45px;
+}
+
+.menu-secondary{
+    margin-top: 12px;
+}
+
+.menu-secondary a{
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #8d8d8d;
+}
+
 .collection{
     padding:100px 10%;
     background:#111;
