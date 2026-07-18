@@ -176,18 +176,20 @@ body{
 }
 
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(280px, 1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:0 auto;
 }
 
 .card{
-    width:320px;
-    background:#1b1b1b;
+    width:100%;
+    background:#111;
     border-radius:15px;
     overflow:hidden;
     transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
 .card:hover{
