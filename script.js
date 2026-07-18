@@ -144,3 +144,24 @@ dots.forEach((dot,index)=>{
     });
 
 });
+
+const menu = document.getElementById("fullscreenMenu");
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeMenu");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+    document.body.style.overflow = "hidden";
+});
+
+closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+    document.body.style.overflow = "";
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        menu.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+});
