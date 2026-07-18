@@ -225,22 +225,6 @@ body{
     margin-bottom:60px;
 }
 
-.cards{
-    display:flex;
-    gap:30px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.card{
-    background:#111;
-    width:320px;
-    border-radius:15px;
-    overflow:hidden;
-    transition:0.4s;
-    box-shadow:0 10px 30px rgba(0,0,0,.5);
-}
-
 .card:hover{
     transform:translateY(-12px);
 }
