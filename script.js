@@ -152,16 +152,19 @@ const closeBtn = document.getElementById("closeMenu");
 menuBtn.addEventListener("click", () => {
     menu.classList.add("active");
     document.body.style.overflow = "hidden";
+    navbar.style.opacity = "0";
 });
 
 closeBtn.addEventListener("click", () => {
     menu.classList.remove("active");
     document.body.style.overflow = "";
+    navbar.style.opacity = "1";
 });
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         menu.classList.remove("active");
         document.body.style.overflow = "";
+        navbar.style.opacity = "1";
     }
 });
