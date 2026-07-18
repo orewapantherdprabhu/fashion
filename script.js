@@ -1,3 +1,5 @@
+// ================= NAVBAR =================
+
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -6,18 +8,20 @@ window.addEventListener("scroll", () => {
 
         navbar.classList.add("scrolled");
 
-    }
-
-    else{
+    }else{
 
         navbar.classList.remove("scrolled");
 
     }
 
 });
-const observer = new IntersectionObserver((entries) => {
 
-    entries.forEach(entry => {
+
+// ================= FADE ANIMATION =================
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
@@ -36,5 +40,107 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".fade-up").forEach((element)=>{
 
     observer.observe(element);
+
+});
+
+
+
+// ================= HERO SLIDER =================
+
+const slides = document.querySelectorAll(".slide");
+
+const dots = document.querySelectorAll(".dot");
+
+const next = document.querySelector(".next");
+
+const prev = document.querySelector(".prev");
+
+let currentSlide = 0;
+
+
+
+function showSlide(index){
+
+    slides.forEach(slide=>{
+
+        slide.classList.remove("active");
+
+    });
+
+    dots.forEach(dot=>{
+
+        dot.classList.remove("active");
+
+    });
+
+    slides[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+}
+
+
+
+next.addEventListener("click",()=>{
+
+    currentSlide++;
+
+    if(currentSlide>=slides.length){
+
+        currentSlide=0;
+
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+
+prev.addEventListener("click",()=>{
+
+    currentSlide--;
+
+    if(currentSlide<0){
+
+        currentSlide=slides.length-1;
+
+    }
+
+    showSlide(currentSlide);
+
+});
+
+
+
+// Auto Slide
+
+setInterval(()=>{
+
+    currentSlide++;
+
+    if(currentSlide>=slides.length){
+
+        currentSlide=0;
+
+    }
+
+    showSlide(currentSlide);
+
+},5000);
+
+
+
+// Dot Click
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        currentSlide=index;
+
+        showSlide(currentSlide);
+
+    });
 
 });
