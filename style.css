@@ -618,8 +618,6 @@ letter-spacing:15px;
 
 }
 
-
-
 .collection-banner p{
 
 font-size:22px;
@@ -627,9 +625,6 @@ font-size:22px;
 margin-top:20px;
 
 }
-
-
-
 
 .men-banner{
 
@@ -642,8 +637,6 @@ url("images/men-banner.jpg");
 
 }
 
-
-
 .women-banner{
 
 background-image:
@@ -655,8 +648,6 @@ url("images/women-banner.jpg");
 
 }
 
-
-
 .accessories-banner{
 
 background-image:
@@ -667,9 +658,6 @@ rgba(0,0,0,.45)
 url("images/accessories-banner.jpg");
 
 }
-
-
-
 
 .products{
 
@@ -685,32 +673,20 @@ gap:30px;
 
 }
 
-
-
-
 .product-card{
-
 background:white;
-
 border-radius:15px;
-
 overflow:hidden;
-
 text-align:center;
-
 transition:.3s;
 
 }
-
-
 
 .product-card:hover{
 
 transform:translateY(-10px);
 
 }
-
-
 
 .product-card img{
 
@@ -722,8 +698,6 @@ object-fit:cover;
 
 }
 
-
-
 .product-card h3{
 
 padding:20px;
@@ -732,4 +706,70 @@ color:#222;
 
 font-size:18px;
 
+}
+
+/* =========================
+   PRODUCT CARDS (MEN/WOMEN/ACCESSORIES)
+========================= */
+
+.products{
+    background:#7285A5; /* Wedgewood Gray */
+    padding:60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:#ffffff;
+    border-radius:16px;
+    overflow:hidden;
+    text-align:center;
+    transition:all 0.3s ease;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.18);
+}
+
+.product-card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-card h3{
+    color:#1f1f1f;
+    font-size:18px;
+    font-weight:600;
+    padding:18px 12px 22px;
+    letter-spacing:0.5px;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        padding:40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px){
+    .products{
+        grid-template-columns:1fr;
+        padding:24px;
+        gap:20px;
+    }
+
+    .product-card img{
+        height:300px;
+    }
+
+    .product-card h3{
+        font-size:17px;
+    }
 }
