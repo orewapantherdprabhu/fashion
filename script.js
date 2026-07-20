@@ -200,3 +200,17 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 fadeElements.forEach(el => observer.observe(el));
+
+// ===== Navbar blur on scroll =====
+
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+
+    if(window.scrollY > 30){
+        navbar.classList.add('scrolled');
+    }else{
+        navbar.classList.remove('scrolled');
+    }
+
+});
