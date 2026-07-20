@@ -1150,3 +1150,110 @@ html, body{
         object-fit:cover;
     }
 }
+
+body{
+    font-family:'Inter', sans-serif;
+}
+
+h1, h2, h3, .logo, .menu-logo{
+    font-family:'Playfair Display', serif;
+}
+
+.collection,
+.products,
+.explore-page{
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+.collection h2{
+    margin-bottom:40px;
+    letter-spacing:2px;
+}
+
+.card img,
+.product-card img,
+.explore-card img{
+    transition:transform 0.5s ease;
+}
+
+.card:hover img,
+.product-card:hover img,
+.explore-card:hover img{
+    transform:scale(1.05);
+}
+
+#navbar{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+}
+
+:root{
+    --gold:#C8A96B;
+}
+
+.menu-divider{
+    color:var(--gold);
+}
+
+.btn{
+    border:1px solid var(--gold);
+}
+
+.btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+.footer{
+    background:#111;
+    color:#eee;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer-logo{
+    font-size:34px;
+    letter-spacing:6px;
+    margin-bottom:14px;
+}
+
+.footer p{
+    color:#bbb;
+    margin:8px 0;
+}
+
+.footer-links{
+    margin:22px 0;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:#eee;
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:#C8A96B;
+}
+
+.copyright{
+    margin-top:24px;
+    font-size:14px;
+    color:#888;
+}
+
+.fade-up{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.8s ease;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
