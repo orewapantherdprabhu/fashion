@@ -972,3 +972,9 @@ body{
     overflow-y:auto;
     -webkit-overflow-scrolling:touch; /* smoother Android scrolling */
 }
+
+html, body{
+    overflow-x:hidden;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+}
