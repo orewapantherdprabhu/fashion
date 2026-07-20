@@ -40,7 +40,7 @@ body{
 /* ================= NAVBAR ================= */
 
 #navbar{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -54,6 +54,13 @@ body{
 
     background:transparent;
     transition:all .35s ease;
+}
+
+#navbar.scrolled{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 4px 18px rgba(0,0,0,.12);
 }
 
 #navbar.scrolled{
@@ -1166,13 +1173,6 @@ h1, h2, h3, .logo, .menu-logo{
     font-family:'Playfair Display', serif;
 }
 
-.collection,
-.products,
-.explore-page{
-    padding-top:80px;
-    padding-bottom:80px;
-}
-
 .collection h2{
     margin-bottom:40px;
     letter-spacing:2px;
@@ -1188,12 +1188,6 @@ h1, h2, h3, .logo, .menu-logo{
 .product-card:hover img,
 .explore-card:hover img{
     transform:scale(1.05);
-}
-
-#navbar{
-    background:rgba(255,255,255,0.75);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
 }
 
 :root{
