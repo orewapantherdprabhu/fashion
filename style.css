@@ -941,11 +941,11 @@ font-size:18px;
     }
 
     /* Product pages */
-    .products{
-        grid-template-columns:1fr !important;
-        padding:24px 16px !important;
-        gap:18px !important;
-    }
+    .product-card img{
+    height:auto !important;
+    aspect-ratio:4 / 5;   /* keeps a nice fashion-card shape */
+    object-fit:cover;
+}
 
     .product-card{
         width:100% !important;
@@ -954,6 +954,8 @@ font-size:18px;
     }
 
     .product-card img{
-        height:300px !important;
+        height:auto !important;
+        aspect-ratio:4 / 5;
+        object-fit:cover;
     }
 }
