@@ -290,16 +290,17 @@ body{
 /* ================= HERO SLIDER ================= */
 
 .hero{
-    position:relative;
-    width:100%;
-    min-height:100vh;   /* changed from height */
-    overflow:visible;   /* changed from hidden */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible;   /* IMPORTANT */
 }
 
 .slider{
-    width:100%;
-    min-height:100vh;
-    position:relative;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;    /* keep only hidden */
 }
 
 .slide{
@@ -1256,4 +1257,23 @@ h1, h2, h3, .logo, .menu-logo{
 .fade-up.show{
     opacity:1;
     transform:translateY(0);
+}
+
+html, body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* Prevent any nested scrollbars */
+.hero,
+.slider,
+.slide{
+    scrollbar-width: none;        /* Firefox */
+}
+
+.hero::-webkit-scrollbar,
+.slider::-webkit-scrollbar,
+.slide::-webkit-scrollbar{
+    display: none;                /* Chrome, Edge */
 }
