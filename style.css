@@ -978,3 +978,29 @@ html, body{
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
 }
+
+@media (max-width: 768px){
+
+    #navbar{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+    }
+
+    .home-link{
+        font-size:12px;
+        flex-shrink:0;
+    }
+
+    .logo{
+        font-size:22px;
+        letter-spacing:2px;
+        flex:1;
+        text-align:center;
+    }
+
+    .menu-btn{
+        flex-shrink:0;
+    }
+}
