@@ -4,9 +4,10 @@
     box-sizing:border-box;
 }
 
-html, body{
-    width:100%;
-    overflow-x:hidden; /* prevents horizontal scrolling */
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 img{
@@ -14,11 +15,21 @@ img{
     display:block;
 }
 
-{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -1003,4 +1014,13 @@ html, body{
     .menu-btn{
         flex-shrink:0;
     }
+}
+
+.home-page {
+  min-height: 100dvh; /* dynamic viewport height */
+}
+
+.home-page {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
