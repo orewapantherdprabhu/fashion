@@ -1092,15 +1092,6 @@ html, body{
     letter-spacing:1px;
 }
 
-/* Tablet */
-@media (max-width: 900px){
-
-    .explore-cards{
-        grid-template-columns:repeat(2, 1fr);
-    }
-
-}
-
 /* Mobile */
 @media (max-width: 600px){
 
@@ -1129,5 +1120,33 @@ html, body{
 
     .explore-card img{
         height:320px;
+    }
+}
+
+/* =========================
+   ANDROID TABLET FIX
+   Featured collection cards
+========================= */
+
+@media (min-width: 700px) and (max-width: 1024px){
+
+    .cards{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:28px;
+        padding:0 24px;
+    }
+
+    .card{
+        width:100%;
+        max-width:520px;
+        margin:0 auto;
+    }
+
+    .card img{
+        width:100%;
+        height:auto;
+        object-fit:cover;
     }
 }
